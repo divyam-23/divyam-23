@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #0073e6; /* Blue background */
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.container {
+    background-color: rgba(255, 255, 0, 0.8); /* Bright yellow container background */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.coin {
+    width: 100px;
+    height: 100px;
+    background-color: yellow; /* Bright yellow coin background */
+    border: 2px solid #333;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: transform 2s ease-in-out;
+}
+
+.side {
+    width: 100%;
+    height: 100%;
+    font-size: 24px;
+    text-align: center;
+    line-height: 100px;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.side:nth-child(1) {
+    transform: rotateY(0deg);
+    background-color: #fff;
+    color: #333;
+}
+
+.side:nth-child(2) {
+    transform: rotateY(180deg);
+    background-color: #333;
+    color: #fff;
+}
+
+#flip-button {
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#flip-button:hover {
+    background-color: #555;
+}
